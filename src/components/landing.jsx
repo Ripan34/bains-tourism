@@ -6,6 +6,7 @@ import img3 from '../images/riv.png';
 import styles from '../css/Landing.module.css';
 import Navbar from './navbar';
 import WelcomeContainer from "./welcomeContainer";
+import Tours from "./tours";
 
 const Landing = () => {
     const headline = {
@@ -36,13 +37,11 @@ const Landing = () => {
           { image: img1, speed: -50 },
           { image: img2, speed: -40 },
           { image: img3, speed: -20 },
-          gradientOverlay
+          gradientOverlay,
         ]}
       />
       </div>
-      <div style={{height: '100vh', backgroundColor: 'black'}}>
-
-</div>
+      <Tours/>
       </>
   );
 };

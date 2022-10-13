@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.slides {
+    height: 30vh;
+    width: 12vw;
+    background-color: yellow;
+}
+.slideWrapper {
+    display: flex;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+}
+.nextSlide {
+    height: 34vh;
+    width: 14vw;
+}

@@ -1,0 +1,34 @@
+.wrapper {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+.tourHeaderContainer {
+    display: flex;
+    font-size: 25px;
+    color: white;
+}
+.sliderWrapper {
+    width: 60%;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+}
+.nextSlide {
+    height: 34vh;
+    width: 14vw;
+}
+.slides {
+    height: 30vh;
+    width: 20vw;
+    background-color: yellow;
+}

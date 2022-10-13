@@ -13,17 +13,18 @@
     z-index: 99;
 }
 .title {
-    font-size: 90px;
+    font-size: 70px;
     font-weight: bolder;
+    color: white;
 }
 .missionS {
     font-size: 30px;
 }
 .btn{
-    background: linear-gradient(to left, #464b5d 50%, white 50%) right;
+    /* background: linear-gradient(to left, #464b5d 50%, white 50%) right;
     background-size: 200% 100%;
     transition: .3s ease-out;
-    padding: 12px;
+    padding: 12px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,10 +32,10 @@
     cursor: pointer;
     color: white;
 }
-.btn:hover {
+/* .btn:hover {
     background-position: left;
     color: black;
-}
+} */
 .search {
     position: absolute;
     border: 1px solid black;
