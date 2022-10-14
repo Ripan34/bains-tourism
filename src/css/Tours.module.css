@@ -5,30 +5,73 @@
     justify-content: space-between;
     align-items: center;
     padding: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 0.6s ease-out;
 }
 .tourHeaderContainer {
     display: flex;
-    font-size: 25px;
+    font-size: 90px;
     color: white;
+    font-weight: 900;
 }
 .sliderWrapper {
     width: 60%;
 }
 .btn {
+  height: 30px;
+  width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
     padding: 10px;
     cursor: pointer;
-    width: 50px;
+    font-weight: 600;
+    font-size: 30px;
+    border-radius: 50%;
 }
 .nextSlide {
     height: 34vh;
     width: 14vw;
 }
 .slides {
-    height: 30vh;
+    height: 100%;
     width: 20vw;
-    background-color: yellow;
+    background-size: cover;
 }
+.fadeOutLeft {
+	-webkit-animation: fade-out-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: fade-out-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes fade-out-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+  }
+  .btnContainer {
+    margin-top: 50px;
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+  }
