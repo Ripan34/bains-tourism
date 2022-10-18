@@ -4,32 +4,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding-left: 100px;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: opacity 0.6s ease-out;
+    box-sizing: border-box;
+    filter: grayscale(30%);
+
 }
 .tourHeaderContainer {
     display: flex;
-    font-size: 90px;
-    color: white;
-    font-weight: 900;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.391);
+    border-radius: 15px;
+}
+.title {
+  font-size: 70px;
+  color: black;
+  font-weight: 900;
+  top: 250px;
+  margin-bottom: 20px;
+}
+.trs {
+  font-size: 90px;
+  color: white;
+  font-weight: 900;
+  position: fixed;
+  top: 100px;
+  margin-bottom: 20px;
+}
+.desc {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 3px;
 }
 .sliderWrapper {
-    width: 60%;
+    width: 55%;
 }
 .btn {
   height: 30px;
   width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: antiquewhite;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 30px;
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 30px;
+  border-radius: 50%;
 }
 .nextSlide {
     height: 34vh;
@@ -37,12 +62,13 @@
 }
 .slides {
     height: 100%;
-    width: 20vw;
+    width: 100%;
     background-size: cover;
+    border-radius: 15px;
 }
 .fadeOutLeft {
-	-webkit-animation: fade-out-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: fade-out-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: fade-out-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: fade-out-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 @-webkit-keyframes fade-out-left {
     0% {
@@ -74,4 +100,10 @@
     width: 30%;
     justify-content: space-between;
     align-items: center;
+  }
+  .slideTopTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }

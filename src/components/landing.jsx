@@ -7,6 +7,8 @@ import styles from '../css/Landing.module.css';
 import Navbar from './navbar';
 import WelcomeContainer from "./welcomeContainer";
 import Tours from "./tours";
+import Packages from "./packages";
+import Footer from "./footer";
 
 const Landing = () => {
     const headline = {
@@ -42,6 +44,8 @@ const Landing = () => {
       />
       </div>
       <Tours/>
+      <Packages/>
+      <Footer/>
       </>
   );
 };

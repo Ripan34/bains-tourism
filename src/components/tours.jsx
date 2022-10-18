@@ -6,16 +6,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "../css/sliderStyles.css";
-import shimla from '../images/shimla.jpg';
-import rajs from '../images/rajas.jpg';
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-
+import places from "./toursData";
 
 const Tours = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const places = [{place: "Shimla", img: shimla}, {place: "Rajasthan", img: rajs}, {place: "Jatt", img: shimla} , {place: "Sher", img: shimla}, {place: "ewewe", img: shimla},
-  {place: "qwewe", img: shimla}];
   const [showIndex, setShowIndex] = useState(1);
   const prevRef = useRef();
   const nextRef = useRef();
@@ -24,15 +20,21 @@ const Tours = () => {
   return (
     <div className={styles.wrapper} style={{backgroundImage: `url(${places[showIndex-1].img})`}}>
       <div className={styles.tourHeaderContainer}>
-        {places[showIndex-1].place}
+        <div className={styles.trs}>DESTINATIONS</div>
+        <div className={styles.title}>{places[showIndex-1].place}</div>
+        <div className={styles.desc}>
+          {places[showIndex-1].desc}
+        </div>
       </div>
       <div className={styles.sliderWrapper}>
       <Swiper
         effect={"coverflow"}
+        spaceBetween={50}
         navigation={{
           prevEl: prevRef?.current,
           nextEl: nextRef?.current,
         }}
+        
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
@@ -41,7 +43,7 @@ const Tours = () => {
           stretch: 0,
           depth: 50,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         onSwiper={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
@@ -49,33 +51,38 @@ const Tours = () => {
           swiper.navigation.init();
           swiper.navigation.update();
         }}
-        pagination={true}
         modules={[EffectCoverflow, Pagination, Navigation]}
         onSlideChange={(sp) => setActiveSlide(sp.activeIndex)}
         className="mySwiper"
       >
         <SwiperSlide className={activeSlide > 0 ?  styles.fadeOutLeft: 'swiper-slide'}>
-        <div className={ styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>1</div>
+          <div className={styles.slideTopTitle}>{places[1].place}</div>
+        <div className={ styles.slides} style={{backgroundImage: `url(${places[1].img})`}}></div>
         </SwiperSlide>
         <SwiperSlide className={activeSlide > 1 ?  styles.fadeOutLeft: 'swiper-slide'}>
-        <div className={styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>2</div>
+        <div className={styles.slideTopTitle}>{places[2].place}</div>
+        <div className={styles.slides} style={{backgroundImage: `url(${places[2].img})`}}></div>
         </SwiperSlide>
         <SwiperSlide className={activeSlide > 2 ?  styles.fadeOutLeft: 'swiper-slide'} >
-        <div className={styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>3</div>
+        <div className={styles.slideTopTitle}>{places[3].place}</div>
+        <div className={styles.slides} style={{backgroundImage: `url(${places[3].img})`}}></div>
         </SwiperSlide>
         <SwiperSlide className={activeSlide > 3 ?  styles.fadeOutLeft: 'swiper-slide'}>
-        <div className={ styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>4</div>
+        <div className={styles.slideTopTitle}>{places[4].place}</div>
+        <div className={ styles.slides} style={{backgroundImage: `url(${places[4].img})`}}></div>
         </SwiperSlide>
         <SwiperSlide className={activeSlide > 4 ?  styles.fadeOutLeft: 'swiper-slide'}>
-        <div className={styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>5</div>
+        <div className={styles.slideTopTitle}>{places[5].place}</div>
+        <div className={styles.slides} style={{backgroundImage: `url(${places[5].img})`}}></div>
         </SwiperSlide>
         <SwiperSlide className={activeSlide > 5 ?  styles.fadeOutLeft: 'swiper-slide'}>
-        <div className={ styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}>6</div>
+        <div className={styles.slideTopTitle}>{places[5].place}</div>
+        <div className={ styles.slides} style={{backgroundImage: `url(${places[showIndex].img})`}}></div>
         </SwiperSlide>
       </Swiper>
       <div className={styles.btnContainer}>
-           <div ref={prevRef} className={styles.btn} onClick={() =>{ setShowIndex(prev => prev-1)}}>&lt;</div>
-          <div ref={nextRef} className={styles.btn} onClick={() => setShowIndex(prev => prev+1)}>&gt;</div>
+         {<div ref={prevRef} style={{visibility: showIndex > 1 ? 'visible': 'hidden'}} className={styles.btn} onClick={() =>{ setShowIndex(prev => prev-1)}}>&lt;</div>}
+         { showIndex != places.length-1 &&<div ref={nextRef} className={styles.btn} onClick={() => setShowIndex(prev => prev+1)}>&gt;</div>}
       </div>
       </div>
     </div>
