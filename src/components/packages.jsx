@@ -1,5 +1,7 @@
 import React from "react";
 import styles from '../css/Packages.module.css';
+import ws from '../images/ws.png';
+import car from '../images/car.jpg';
 
 const Packages = () => {
     return (
@@ -9,8 +11,14 @@ const Packages = () => {
             </div>
             <div className={styles.servicesWrapper}>
                 <div className={styles.inside}>
-                    <div className={styles.txt}>Western Union</div>
-                    <div className={styles.txt}>Accessories Shop</div>
+                    <div style={{display: 'flex', }}>
+                        <div className={styles.txt} style={{marginRight: '50px'}}>Cash Services</div>
+                        <img style={{width: '40vw'}} src={ws} alt='ws'/>
+                    </div>
+                    <div style={{display: 'flex',}}>
+                        <img style={{width: '30vw', marginRight: '50px'}} src={car} alt='ws'/>
+                        <div className={styles.txt}>Car Accessories</div>
+                    </div>
                 </div>
             </div>
         </div>
