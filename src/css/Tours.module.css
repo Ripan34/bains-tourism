@@ -2,41 +2,35 @@
     height: 100vh;
     background-color: black;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-left: 100px;
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    filter: grayscale(30%);
-
+    position: relative;
+    overflow: hidden;
 }
 .tourHeaderContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.391);
-    border-radius: 15px;
 }
 .title {
-  font-size: 70px;
+  font-size: 3vw;
   color: black;
   font-weight: 900;
   top: 250px;
   margin-bottom: 20px;
 }
 .trs {
-  font-size: 90px;
+  font-size: 4vw;
   color: white;
   font-weight: 900;
-  position: fixed;
-  top: 100px;
   margin-bottom: 20px;
 }
 .desc {
   color: black;
-  font-size: 25px;
+  font-size: 1.3vw;
   font-weight: 600;
   letter-spacing: 3px;
 }
@@ -49,7 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: #D9CAB3;
   padding: 10px;
   cursor: pointer;
   font-weight: 600;
@@ -61,7 +55,7 @@
     width: 14vw;
 }
 .slides {
-    height: 100%;
+    height: 90%;
     width: 100%;
     background-size: cover;
     border-radius: 15px;
@@ -106,4 +100,79 @@
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
+  }
+  .diag {
+    height: 50px;
+    width: 100%;
+    transform: rotate(-4deg);
+    background-color: red;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+  }
+  .brder {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.391);
+    border-radius: 10px;
+    max-height: 300px;
+    min-height: 300px;
+    overflow: auto;
+  }
+  .btn:hover {
+    background-color: #F6F6F6;
+  }
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      flex-direction: column;
+      padding-left: 0;
+    }
+    .brder {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.391);
+      border-radius: 10px;
+      max-height: 200px;
+      min-height: 200px;
+      overflow: auto;
+    }
+    .sliderWrapper {
+      width: 90%;
+  }
+  .slideTopTitle {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .desc {
+    color: black;
+    font-size: 3.5vw;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .trs {
+    font-size: 7.5vw;
+    color: white;
+    font-weight: 900;
+  }
+  .tourHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.title {
+  font-size: 6vw;
+  color: black;
+  font-weight: 900;
+  top: 250px;
+  margin-bottom: 10px;
+}
+.btnContainer {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
   }

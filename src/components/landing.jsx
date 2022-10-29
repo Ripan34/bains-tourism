@@ -9,6 +9,7 @@ import WelcomeContainer from "./welcomeContainer";
 import Tours from "./tours";
 import Packages from "./packages";
 import Footer from "./footer";
+import TestLanding from './testLanding';
 
 const Landing = () => {
     const headline = {
