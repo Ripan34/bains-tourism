@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../css/Gallery.module.css";
 import Navbar from "./navbar";
-import shimla from "../images/shimla.jpg";
-import khand from "../images/khandar.jpg";
-import man from "../images/manali.jpg";
-import rajas from '../images/rajas.jpg';
-import waterF from '../images/waterF.jpg';
+import shimla from "../images/shimla.webp";
+import khand from "../images/khandar.webp";
+import man from "../images/manali.webp";
+import rajas from '../images/rajas.webp';
+import waterF from '../images/waterF.webp';
 
 import Footer from "./footer";
 
@@ -18,22 +18,22 @@ const Gallery = () => {
         <div style={{padding: '10px', boxSizing: 'border-box'}}>
         <div className={styles.row}>
           <div className={styles.column}>
-            <img src={waterF} className={styles.im} />
-            <img src={khand} className={styles.im} />
-            <img src={rajas} className={styles.im} />
-            <img src={man} className={styles.im} />
+            <img alt="gallery" src={waterF} className={styles.im} />
+            <img alt="gallery" src={khand} className={styles.im} />
+            <img alt="gallery" src={rajas} className={styles.im} />
+            <img alt="gallery" src={man} className={styles.im} />
           </div>
           <div className={styles.column}>
-            <img src={khand} className={styles.im} />
-            <img src={man} className={styles.im} />
-            <img src={rajas} className={styles.im} />
-            <img src={shimla} className={styles.im} />
+            <img alt="gallery" src={khand} className={styles.im} />
+            <img alt="gallery" src={man} className={styles.im} />
+            <img alt="gallery" src={rajas} className={styles.im} />
+            <img alt="gallery" src={shimla} className={styles.im} />
           </div>
           <div className={styles.column}>
-            <img src={man} className={styles.im} />
-            <img src={waterF} className={styles.im} />
-            <img src={rajas} className={styles.im} />
-            <img src={shimla} className={styles.im} />
+            <img alt="gallery" src={man} className={styles.im} />
+            <img alt="gallery" src={waterF} className={styles.im} />
+            <img alt="gallery" src={rajas} className={styles.im} />
+            <img alt="gallery" src={shimla} className={styles.im} />
           </div>
         </div>
       </div>

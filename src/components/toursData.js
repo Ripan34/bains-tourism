@@ -1,10 +1,10 @@
-import shimla from '../images/shimla.jpg';
-import rajs from '../images/rajas.jpg';
-import manali from '../images/manali.jpg';
-import manikarn from '../images/manikarn.jpeg';
-import leh from '../images/leh.jpg';
-import sona from '../images/sona.jpg';
-import gul from '../images/gul.jpg';
+import shimla from '../images/shimla.webp';
+import rajs from '../images/rajas.webp';
+import manali from '../images/manali.webp';
+import manikarn from '../images/manikarn.webp';
+import leh from '../images/leh.webp';
+import sona from '../images/sona.webp';
+import gul from '../images/gul.webp';
 
 const places = [
   { 
